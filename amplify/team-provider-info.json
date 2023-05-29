@@ -17,6 +17,12 @@
       },
       "api": {
         "cfbsprojet": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "ds6n33vb5tzpc",
+          "type": "cicd"
+        }
       }
     }
   }

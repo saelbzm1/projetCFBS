@@ -1,45 +1,42 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+// mutations.js
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    createTodo(input: $input, condition: $condition) {
+export const createBilling = /* GraphQL */ `
+  mutation CreateBilling($input: CreateBillingInput!) {
+    createBilling(input: $input) {
       id
-      name
-      description
-      createdAt
-      updatedAt
+      customerId
+      invoiceDate
+      amount
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    updateTodo(input: $input, condition: $condition) {
-      id
-      name
-      description
-      createdAt
-      updatedAt
+
+export const createConsumption = /* GraphQL */ `
+  mutation CreateConsumption($input: CreateConsumptionInput!) {
+    createConsumption(input: $input) {
+      // Définissez les champs que vous souhaitez récupérer
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    deleteTodo(input: $input, condition: $condition) {
+
+export const updateBilling = /* GraphQL */ `
+  mutation UpdateBilling($input: UpdateBillingInput!) {
+    updateBilling(input: $input) {
       id
-      name
-      description
-      createdAt
-      updatedAt
+      customerId
+      invoiceDate
+      amount
+    }
+  }
+`;
+
+export const deleteBilling = /* GraphQL */ `
+  mutation DeleteBilling($input: DeleteBillingInput!) {
+    deleteBilling(input: $input) {
+      id
+      customerId
+      invoiceDate
+      amount
     }
   }
 `;

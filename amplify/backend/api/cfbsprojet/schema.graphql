@@ -1,8 +1,28 @@
 type Billing {
   id: ID!
-  customerName: String!
+  customerId: String!
   invoiceDate: String!
   amount: Float!
 }
 
+type Mutation {
+  createBilling(input: CreateBillingInput!): Billing
+}
 
+input CreateBillingInput {
+  customerId: String!
+  invoiceDate: String!
+  amount: Float!
+}
+
+type Query {
+  getBillingData: [Billing]
+  getConsumptionData: [Consumption]
+}
+
+type Consumption {
+  id: ID!
+  customerId: String!
+  consumptionDate: String!
+  quantity: Int!
+}

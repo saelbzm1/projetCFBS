@@ -1,32 +1,35 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getBilling = /* GraphQL */ `
+  query GetBilling($id: ID!) {
+    getBilling(id: $id) {
       id
-      name
-      description
-      createdAt
-      updatedAt
+      customerId
+      invoiceDate
+      amount
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        description
-        createdAt
-        updatedAt
-      }
-      nextToken
+
+export const getBillingData = /* GraphQL */ `
+  query GetBillingData {
+    getBillingData {
+      id
+      customerId
+      invoiceDate
+      amount
+    }
+  }
+`;
+
+export const getConsumptionData = /* GraphQL */ `
+  query GetConsumptionData {
+    getConsumptionData {
+      id
+      customerId
+      consumptionDate
+      consumptionValue
     }
   }
 `;
