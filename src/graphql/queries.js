@@ -1,6 +1,3 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
-
 export const getBilling = /* GraphQL */ `
   query GetBilling($id: ID!) {
     getBilling(id: $id) {
@@ -8,6 +5,9 @@ export const getBilling = /* GraphQL */ `
       customerId
       invoiceDate
       amount
+      selectedOffers
+      offerType
+      pricePerDocument
     }
   }
 `;
@@ -15,10 +15,15 @@ export const getBilling = /* GraphQL */ `
 export const getBillingData = /* GraphQL */ `
   query GetBillingData {
     getBillingData {
-      id
-      customerId
-      invoiceDate
-      amount
+      items {
+        id
+        customerId
+        invoiceDate
+        amount
+        selectedOffers
+        offerType
+        pricePerDocument
+      }
     }
   }
 `;
@@ -26,10 +31,12 @@ export const getBillingData = /* GraphQL */ `
 export const getConsumptionData = /* GraphQL */ `
   query GetConsumptionData {
     getConsumptionData {
-      id
-      customerId
-      consumptionDate
-      consumptionValue
+      items {
+        id
+        customerId
+        consumptionDate
+        quantity
+      }
     }
   }
 `;

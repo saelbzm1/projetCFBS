@@ -1,5 +1,3 @@
-// mutations.js
-
 export const createBilling = /* GraphQL */ `
   mutation CreateBilling($input: CreateBillingInput!) {
     createBilling(input: $input) {
@@ -7,6 +5,9 @@ export const createBilling = /* GraphQL */ `
       customerId
       invoiceDate
       amount
+      selectedOffers
+      offerType
+      pricePerDocument
     }
   }
 `;
@@ -14,7 +15,10 @@ export const createBilling = /* GraphQL */ `
 export const createConsumption = /* GraphQL */ `
   mutation CreateConsumption($input: CreateConsumptionInput!) {
     createConsumption(input: $input) {
-      // Définissez les champs que vous souhaitez récupérer
+      id
+      customerId
+      consumptionDate
+      quantity
     }
   }
 `;
@@ -26,6 +30,9 @@ export const updateBilling = /* GraphQL */ `
       customerId
       invoiceDate
       amount
+      selectedOffers
+      offerType
+      pricePerDocument
     }
   }
 `;

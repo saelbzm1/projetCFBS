@@ -1,0 +1,38 @@
+type Billing {
+  id: ID!
+  customerId: String!
+  invoiceDate: String!
+  amount: Float!
+  selectedOffers: [String!]!
+  offerType: String
+  pricePerDocument: Float
+}
+
+type Query {
+  getBilling(id: ID!): Billing!
+}
+
+type Mutation {
+  createBilling(input: CreateBillingInput!): Billing!
+  updateBilling(input: UpdateBillingInput!): Billing!
+  deleteBilling(id: ID!): Billing!
+}
+
+input CreateBillingInput {
+  customerId: String!
+  invoiceDate: String!
+  amount: Float!
+  selectedOffers: [String!]!
+  offerType: String
+  pricePerDocument: Float
+}
+
+input UpdateBillingInput {
+  id: ID!
+  customerId: String!
+  invoiceDate: String!
+  amount: Float!
+  selectedOffers: [String!]!
+  offerType: String
+  pricePerDocument: Float
+}
